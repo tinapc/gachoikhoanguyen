@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xổ gà online hàng ngày | Gà Chọi Khoa Nguyễn</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha512-rRQtF4V2wtAvXsou4iUAs2kXHi3Lj9NE7xJR77DE7GHsxgY9RTWy93dzMXgDIG8ToiRTD45VsDNdTiUagOFeZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/js/splide-min.css">
+    <link rel="stylesheet" href="./assets/js/splide-default.min.css">
+    <link rel="stylesheet" href="./assets/js/splide-core.min.css">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex min-h-screen relative">
-    <div class="w-full max-w-7xl mx-auto px-6">
+<body class="flex flex-col min-h-screen relative bg-gray-100">
+    <div class="w-full max-w-7xl mx-auto px-6 bg-white">
         <div class="flex flex-row justify-between">
             <div class="w-3/4 flex flex-row items-center gap-2">
                 <div class="w-14">
@@ -29,7 +43,7 @@
         </div>
 
         <div class="border border-red-300 my-8 p-2 text-red-700 text-base lg:text-2xl bg-red-100">
-            Website hoạt động với hình thức giải trí, không cá độ dưới mọi hình thức vi phạm pháp luật VN.
+            Website hoạt động với hình thức giải trí, không cá độ dưới mọi hình thức vi phạm pháp luật Việt Nam.
         </div>
 
         <div class="flex flex-col lg:flex-row">
@@ -38,6 +52,10 @@
                 Your browser does not support the video tag.
             </video>
             <div class="border border-gray-200 w-full h-[460px] lg:w-1/3">
+                <div class="bg-gray-200 text-2xl font-semibold px-4 py-2 flex flex-col">
+                    <span>Trò Chuyện Trực Tuyến</span>
+                    <span class="text-xs text-red-600">Vui lòng không cá cược dưới mọi hình thức.</span>
+                </div>
                 <iframe src="https://www5.cbox.ws/box/?boxid=952291&boxtag=lN0EB5" width="100%" height="100%" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
             </div>
         </div>
@@ -84,19 +102,147 @@
             </div>
         </div>
 
-        <div class="fixed right-1 bottom-5 flex flex-col gap-3">
-            <a href="https://www.facebook.com/gachoikhoanguyen" target="_blank" class="flex items-center text-white">
-                <img src="./assets/fb-logo.png" alt="" class="w-8 h-8">
-            </a>
+        <div class="mt-14">
+            <h2 class="text-3xl font-semibold">Kết nối đam mê</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 my-8">
+                <a href="https://zalo.me/0977224643" target="_blank" class="flex flex-row gap-2 border border-gray-100 p-2 items-center px-8">
+                    <div class="w-16 flex-shrink-0"><img src="./assets/zalo-logo.jpg" alt=""></div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="font-semibold">Zalo Gà Chọi Khoa Nguyễn</h3>
+                        <p class="text-sm">Kết nối giao lưu kinh nghiệm</p>
+                    </div>
+                </a>
+    
+                <a href="" class="flex flex-row gap-2 border border-gray-100 p-2 items-center px-8">
+                    <div class="w-16 flex-shrink-0"><img src="./assets/fb-logo.png" alt=""></div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="font-semibold">Facebook Gà Chọi Khoa Nguyễn</h3>
+                        <p class="text-sm">Kết nối giao lưu kinh nghiệm</p>
+                    </div>
+                </a>
+    
+                <a href="" class="flex flex-row gap-2 border border-gray-100 p-2 items-center px-8">
+                    <div class="w-16 flex-shrink-0"><img src="./assets/yt-logo.png" alt=""></div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="font-semibold">Youtube Gà Chọi Khoa Nguyễn</h3>
+                        <p class="text-sm">Xem lại các trận gà hấp dẫn</p>
+                    </div>
+                </a>
+            </div>
+        </div>
 
-            <a href="https://zalo.me/097723455" target="_blank" class="flex items-center">
-                <img src="./assets/zalo-logo.jpg" alt="" class="w-8 h-8">
-            </a>
+        <!-- Slide -->
 
-            <a href="tel:097723455">
-                <img src="./assets/phone.png" class="w-8 h-8">
-            </a>
+        <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide">
+                        <img src="./assets/images/1.jpg" alt="">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="./assets/images/2.jpg" alt="">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="./assets/images/3.jpg" alt="">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="./assets/images/4.jpg" alt="">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="./assets/images/5.jpg" alt="">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="./assets/images/6.jpg" alt="">
+                      </li>
+                  </ul>
+            </div>
+          </section>
+
+        <hr class="my-16">
+
+        <div class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Gà Chọi Khoa Nguyễn - Xổ gà online hàng ngày</h2>
+
+            <div class="flex flex-col gap-2">
+                <p>Chào mừng bạn đến với gachoikhoanguyen.com nơi tạo ra sân chơi phục vụ niềm đam mê gà đòn cho anh em 24/7. Đây là website của Gà Chọi Khoa Nguyễn.</p>
+                <p>
+                    Tại CLB Gà Chọi Khoa Nguyễn bạn có thể tìm hiểu về kiến thức về gà đòn, hay đơn giản là thưởng thức những video xổ gà trong những lúc rảnh rỗi. CLB Gà Chọi Khoa Nguyễn sẽ đưa đến cho bạn những thông tin mới nhất về giống gà đòn, kinh nghiệm chăm sóc gà, cách huấn luyện gà chọi và nhiều hơn thế nữa. Ngoài ra, gachoikhoanguyen.com còn cung cấp con giống gà đòn cho những ai đang quan tâm đến việc nuôi gà chọi.
+                </p>
+            </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <div class="bg-slate-900 py-12 mt-12 border-t-2 border-t-red-400">
+        <div class="w-full max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-4 px-6">
+            <div class="flex flex-col items-center lg:items-start mb-12 lg:mb-0">
+                <img src="./assets/logo.png" alt="" class="w-28">
+                <h3 class="text-white">Gà Chọi Khoa Nguyễn - Xổ Gà Online hàng ngày</h3>
+            </div>
+
+            <div>
+                <h3 class="text-white text-xl border-b border-b-red-400 mb-4 pb-2">Qui định</h3>
+                <div class="text-white flex flex-col gap-2">
+                    <p>Website hoạt động với mục đích cung cấp miễn phí các trận đấu gà chọi cực kỳ hấp dẫn.</p>
+                    <p>Website hoạt động với hình thức giải trí, vui lòng không cá độ dưới mọi hình thức vi phạm pháp luật Việt Nam.</p>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-[550px]">
+                <h3 class="text-white text-xl border-b border-b-red-400 mb-4 pb-2">Thông tin liên hệ</h3>
+                <div class="text-white flex flex-col gap-2">
+                    <div class="flex flex-row gap-2 items-center">
+                        <i class="zmdi zmdi-google-maps"></i>
+                        <span>Địa chỉ: <span class="font-semibold">Tịnh Hòa, Tp Quảng Ngãi, tỉnh Quảng Ngãi</span></span>
+                    </div>
+                    <div class="flex flex-row gap-2 items-center">
+                        <i class="zmdi zmdi-phone"></i>
+                        <span>Hotline: <span class="font-semibold">097712345</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-100 py-4 px-4">
+        <div class="w-full max-w-7xl mx-auto text-center text-sm">
+            Bản quyền © 2024 Gà Chọi Khoa Nguyễn - Xổ Gà Online hàng ngày.
+        </div>
+    </div>
+
+    <!-- Float icons -->
+    <div class="fixed right-1 bottom-32 lg:bottom-1/2 flex flex-col gap-3">
+        <a href="https://www.facebook.com/gachoikhoanguyen" target="_blank" class="flex items-center text-white">
+            <img src="./assets/fb-logo.png" alt="" class="w-8 h-8">
+        </a>
+
+        <a href="https://zalo.me/097723455" target="_blank" class="flex items-center">
+            <img src="./assets/zalo-logo.jpg" alt="" class="w-8 h-8">
+        </a>
+
+        <a href="tel:097723455">
+            <img src="./assets/phone.png" class="w-8 h-8">
+        </a>
+    </div>
+
+    <script src="./assets/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        const splide = new Splide( '.splide', {
+            type   : 'loop',
+            drag   : 'free',
+            focus  : 'center',
+            height: 600,
+            gap: '1em',
+            perPage: 3,
+            autoScroll: {
+                speed: 1,
+            },
+        });
+
+        splide.mount(window.splide.Extensions);
+    });
+    </script>
 </body>
 </html>
