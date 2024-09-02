@@ -18,6 +18,45 @@
             font-weight: 300;
             font-style: normal;
         }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            }
+
+            .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 140px;
+            font-size: 14px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -75px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            }
+
+            .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+            }
+
+            .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+            }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -33,12 +72,12 @@
                     <div class="text-sm">https://gachoikhoanguyen.com</div>
                 </div>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="hidden items-center gap-4 lg:flex">
                 <div class="flex gap-1 items-center border border-gray-300 rounded-md px-2 py-0.5 bg-gray-100">
                     <i class="zmdi zmdi-phone"></i>
-                    <span class="font-medium">0977112322</span>
+                    <span class="font-medium">0782224448</span>
                 </div>
-                <div class="text-2xl lg:hidden"><i class="zmdi zmdi-menu"></i></div>
+                <!-- <div class="text-2xl lg:hidden"><i class="zmdi zmdi-menu"></i></div> -->
             </div>
         </div>
 
@@ -68,11 +107,22 @@
                     <div class="flex flex-col gap-2">
                         <div class="flex flex-row items-center gap-2">
                             <div class="flex flex-col">
-                                <div class="font-medium">Chủ tài khoản: Nguyễn Văn A</div>
+                                <div class="font-medium">Chủ tài khoản: Nguyễn Anh Khoa</div>
 
                                 <div class="flex items-center gap-5">
-                                    <div>Số tài khoản: 0123456789</div>
-                                    <div class="cursor-pointer"><i class="zmdi zmdi-copy"></i></div>
+                                    <div>
+                                        Số tài khoản: 
+                                        <input type="text" id="bank-number" value="0271000931769" class="bg-transparent font-bold w-auto max-w-[130px] outline-none">
+                                    </div>
+                                    <div
+                                        class="cursor-pointer tooltip"
+                                        onclick="copyText('bank-number')"
+                                    >
+                                        <span class="tooltiptext" id="myTooltip">Copy to clipboard
+
+                                        </span>
+                                        <i class="zmdi zmdi-copy"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +143,7 @@
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <i class="zmdi zmdi-phone"></i>
-                                    <span>0123456789</span>
+                                    <span>0782224448</span>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +155,7 @@
         <div class="mt-14">
             <h2 class="text-3xl font-semibold">Kết nối đam mê</h2>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 my-8">
-                <a href="https://zalo.me/0977224643" target="_blank" class="flex flex-row gap-2 border border-gray-100 p-2 items-center px-8">
+                <a href="https://zalo.me/0782224448" target="_blank" class="flex flex-row gap-2 border border-gray-100 p-2 items-center px-8">
                     <div class="w-16 flex-shrink-0"><img src="./assets/zalo-logo.jpg" alt=""></div>
                     <div class="flex flex-col gap-1">
                         <h3 class="font-semibold">Zalo Gà Chọi Khoa Nguyễn</h3>
@@ -113,7 +163,7 @@
                     </div>
                 </a>
     
-                <a href="" class="flex flex-row gap-2 border border-gray-100 p-2 items-center px-8">
+                <a href="https://www.facebook.com/GaDonQuangNgai2" target="_blank" class="flex flex-row gap-2 border border-gray-100 p-2 items-center px-8">
                     <div class="w-16 flex-shrink-0"><img src="./assets/fb-logo.png" alt=""></div>
                     <div class="flex flex-col gap-1">
                         <h3 class="font-semibold">Facebook Gà Chọi Khoa Nguyễn</h3>
@@ -197,7 +247,7 @@
                     </div>
                     <div class="flex flex-row gap-2 items-center">
                         <i class="zmdi zmdi-phone"></i>
-                        <span>Hotline: <span class="font-semibold">097712345</span></span>
+                        <a href="tel:0782224448">Hotline: <span class="font-semibold">0782224448</span></a>
                     </div>
                 </div>
             </div>
@@ -216,11 +266,11 @@
             <img src="./assets/fb-logo.png" alt="" class="w-8 h-8">
         </a>
 
-        <a href="https://zalo.me/097723455" target="_blank" class="flex items-center">
+        <a href="https://zalo.me/0782224448" target="_blank" class="flex items-center">
             <img src="./assets/zalo-logo.jpg" alt="" class="w-8 h-8">
         </a>
 
-        <a href="tel:097723455">
+        <a href="tel:0782224448">
             <img src="./assets/phone.png" class="w-8 h-8">
         </a>
     </div>
@@ -233,7 +283,7 @@
             type   : 'loop',
             drag   : 'free',
             focus  : 'center',
-            height: 600,
+            heightRatio: 0.5,
             gap: '1em',
             perPage: 3,
             autoScroll: {
@@ -243,6 +293,17 @@
 
         splide.mount(window.splide.Extensions);
     });
+
+    function copyText(el) {
+        const myEl = document.getElementById(el);
+        console.log(myEl);
+        myEl.select();
+        myEl.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(myEl.value);
+        
+        const tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied: " + myEl.value;
+    }
     </script>
 </body>
 </html>
