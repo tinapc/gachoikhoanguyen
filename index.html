@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xổ gà online hàng ngày | Gà Chọi Khoa Nguyễn</title>
+    <title>Xổ gà online hàng ngày | Mua bán gà đòn Quảng Ngãi | Gà Chọi Khoa Nguyễn</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha512-rRQtF4V2wtAvXsou4iUAs2kXHi3Lj9NE7xJR77DE7GHsxgY9RTWy93dzMXgDIG8ToiRTD45VsDNdTiUagOFeZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./assets/js/splide-min.css">
     <link rel="stylesheet" href="./assets/js/splide-default.min.css">
     <link rel="stylesheet" href="./assets/js/splide-core.min.css">
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+
     <style>
         body {
             font-family: "Inter", sans-serif;
@@ -40,9 +42,9 @@
             margin-left: -75px;
             opacity: 0;
             transition: opacity 0.3s;
-            }
+        }
 
-            .tooltip .tooltiptext::after {
+        .tooltip .tooltiptext::after {
             content: "";
             position: absolute;
             top: 100%;
@@ -51,23 +53,27 @@
             border-width: 5px;
             border-style: solid;
             border-color: #555 transparent transparent transparent;
-            }
+        }
 
-            .tooltip:hover .tooltiptext {
+        .tooltip:hover .tooltiptext {
             visibility: visible;
             opacity: 1;
-            }
+        }
+
+        iframe .msg{
+            padding: 12px !important;
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex flex-col min-h-screen relative bg-gray-100">
-    <div class="w-full max-w-7xl mx-auto px-6 bg-white">
-        <div class="flex flex-row justify-between">
+<body class="flex flex-col min-h-screen relative bg-gray-800">
+    <div class="px-4 py-3 bg-black">
+        <div class="w-full max-w-7xl mx-auto flex flex-row justify-between">
             <div class="w-3/4 flex flex-row items-center gap-2">
                 <div class="w-14">
                     <img src="./assets/logo.png" alt="" class="w-full">
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col text-white">
                     <h1 class="text-lg lg:text-2xl font-bold m-0 p-0">Gà Chọi Khoa Nguyễn</h1>
                     <div class="text-sm">https://gachoikhoanguyen.com</div>
                 </div>
@@ -80,29 +86,34 @@
                 <!-- <div class="text-2xl lg:hidden"><i class="zmdi zmdi-menu"></i></div> -->
             </div>
         </div>
+    </div>
 
-        <div class="border border-red-300 my-8 p-2 text-red-700 text-base lg:text-2xl bg-red-100">
+    <div class="w-full max-w-7xl mx-auto px-4">
+        <div class="border border-red-300 my-8 p-2 text-red-700 text-base lg:text-2xl bg-red-100 rounded-xl">
             Website hoạt động với hình thức giải trí, không cá độ dưới mọi hình thức vi phạm pháp luật Việt Nam.
         </div>
 
         <div class="flex flex-col lg:flex-row">
-            <video class="w-full lg:w-2/3 aspect-video" controls>
-                <source src="./assets/demo-video.mp4" type="video/mp4">
+            <video id="my-video-stream" class="w-full lg:w-2/3 video-js" controls poster="./assets/thumbnail.png">
+                <source src="https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8" type="application/x-mpegURL">
                 Your browser does not support the video tag.
             </video>
-            <div class="border border-gray-200 w-full h-[460px] lg:w-1/3">
+
+            <div class="border border-gray-900 w-full h-[460px] lg:h-auto lg:w-1/2 bg-gray-800">
                 <div class="bg-gray-200 text-2xl font-semibold px-4 py-2 flex flex-col">
                     <span>Trò Chuyện Trực Tuyến</span>
                     <span class="text-xs text-red-600">Vui lòng không cá cược dưới mọi hình thức.</span>
                 </div>
-                <iframe src="https://www5.cbox.ws/box/?boxid=952291&boxtag=lN0EB5" width="100%" height="100%" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                <div class="px-2">
+                    <iframe src="https://www5.cbox.ws/box/?boxid=952291&boxtag=lN0EB5" width="100%" height="100%" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                </div>
             </div>
         </div>
 
-        <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 p-8 bg-gradient-to-b from-black to-gray-800 rounded-xl text-white">
             <div>
                 <h3 class="font-semibold text-xl mb-4">Thông tin chuyển khoản</h3>
-                <div class="flex flex-col gap-4 border border-gray-200 p-4 w-full bg-gray-50">
+                <div class="flex flex-col gap-4 border border-gray-200 p-4 w-full bg-gray-50 rounded-lg text-black">
                     <h4 class="font-semibold text-lg">Ngân hàng Vietcombank</h4>
                     <div class="flex flex-col gap-2">
                         <div class="flex flex-row items-center gap-2">
@@ -132,7 +143,7 @@
 
             <div>
                 <h3 class="font-semibold text-xl mb-4">Địa chỉ liên hệ</h3>
-                <div class="flex flex-col gap-4 border border-gray-200 p-4 w-full bg-gray-50">
+                <div class="flex flex-col gap-4 border border-gray-200 p-4 w-full bg-gray-50 rounded-lg text-black">
                     <h4 class="font-semibold text-lg">Gà Chọi Khoa Nguyễn - Xổ gà online hàng ngày</h4>
                     <div class="flex flex-col gap-2">
                         <div class="flex flex-row items-center gap-2">
@@ -152,10 +163,10 @@
             </div>
         </div>
 
-        <div class="mt-14">
+        <div class="mt-14 bg-gradient-to-b from-black to-gray-800 rounded-xl text-white p-8">
             <h2 class="text-3xl font-semibold">Kết nối đam mê</h2>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 my-8">
-                <a href="https://zalo.me/0782224448" target="_blank" class="flex flex-row gap-2 border border-gray-100 p-2 items-center px-8">
+                <a href="https://zalo.me/0782224448" target="_blank" class="flex flex-row gap-2 p-2 items-center justify-between px-6 bg-sky-300 rounded-lg">
                     <div class="w-16 flex-shrink-0"><img src="./assets/zalo-logo.jpg" alt=""></div>
                     <div class="flex flex-col gap-1">
                         <h3 class="font-semibold">Zalo Gà Chọi Khoa Nguyễn</h3>
@@ -163,7 +174,7 @@
                     </div>
                 </a>
     
-                <a href="https://www.facebook.com/GaDonQuangNgai2" target="_blank" class="flex flex-row gap-2 border border-gray-100 p-2 items-center px-8">
+                <a href="https://www.facebook.com/GaDonQuangNgai2" target="_blank" class="flex flex-row gap-2 p-2 items-center justify-between px-6 bg-blue-500 rounded-lg">
                     <div class="w-16 flex-shrink-0"><img src="./assets/fb-logo.png" alt=""></div>
                     <div class="flex flex-col gap-1">
                         <h3 class="font-semibold">Facebook Gà Chọi Khoa Nguyễn</h3>
@@ -171,7 +182,7 @@
                     </div>
                 </a>
     
-                <a href="" class="flex flex-row gap-2 border border-gray-100 p-2 items-center px-8">
+                <a href="" class="flex flex-row gap-2 p-2 items-center px-6 justify-between bg-red-600 rounded-lg">
                     <div class="w-16 flex-shrink-0"><img src="./assets/yt-logo.png" alt=""></div>
                     <div class="flex flex-col gap-1">
                         <h3 class="font-semibold">Youtube Gà Chọi Khoa Nguyễn</h3>
@@ -181,45 +192,41 @@
             </div>
         </div>
 
-        <!-- Slide -->
-
-        <section class="splide" aria-label="Splide Basic HTML Example">
-            <div class="splide__track">
-                  <ul class="splide__list">
-                      <li class="splide__slide">
-                        <img src="./assets/images/1.jpg" alt="">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="./assets/images/2.jpg" alt="">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="./assets/images/3.jpg" alt="">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="./assets/images/4.jpg" alt="">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="./assets/images/5.jpg" alt="">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="./assets/images/6.jpg" alt="">
-                      </li>
-                  </ul>
-            </div>
-          </section>
-
-        <hr class="my-16">
-
-        <div class="mb-8">
-            <h2 class="text-3xl font-semibold mb-6">Gà Chọi Khoa Nguyễn - Xổ gà online hàng ngày</h2>
-
-            <div class="flex flex-col gap-2">
-                <p>Chào mừng bạn đến với gachoikhoanguyen.com nơi tạo ra sân chơi phục vụ niềm đam mê gà đòn cho anh em 24/7. Đây là website của Gà Chọi Khoa Nguyễn.</p>
-                <p>
-                    Tại CLB Gà Chọi Khoa Nguyễn bạn có thể tìm hiểu về kiến thức về gà đòn, hay đơn giản là thưởng thức những video xổ gà trong những lúc rảnh rỗi. CLB Gà Chọi Khoa Nguyễn sẽ đưa đến cho bạn những thông tin mới nhất về giống gà đòn, kinh nghiệm chăm sóc gà, cách huấn luyện gà chọi và nhiều hơn thế nữa. Ngoài ra, gachoikhoanguyen.com còn cung cấp con giống gà đòn cho những ai đang quan tâm đến việc nuôi gà chọi.
-                </p>
+        <div class="mt-14 bg-gradient-to-b from-black to-gray-800 rounded-xl text-white p-8">
+            <section class="splide" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                      <ul class="splide__list">
+                          <li class="splide__slide">
+                            <img src="./assets/images/1.jpg" alt="">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="./assets/images/2.jpg" alt="">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="./assets/images/3.jpg" alt="">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="./assets/images/4.jpg" alt="">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="./assets/images/6.jpg" alt="">
+                          </li>
+                      </ul>
+                </div>
+              </section>
+    
+            <div class="mb-8 mt-16">
+                <h2 class="text-3xl font-semibold mb-6">Gà Chọi Khoa Nguyễn - Xổ gà online hàng ngày</h2>
+    
+                <div class="flex flex-col gap-2">
+                    <p>Chào mừng bạn đến với gachoikhoanguyen.com nơi tạo ra sân chơi phục vụ niềm đam mê gà đòn cho anh em 24/7. Đây là website của Gà Chọi Khoa Nguyễn.</p>
+                    <p>
+                        Tại CLB Gà Chọi Khoa Nguyễn bạn có thể tìm hiểu về kiến thức về gà đòn, hay đơn giản là thưởng thức những video xổ gà trong những lúc rảnh rỗi. CLB Gà Chọi Khoa Nguyễn sẽ đưa đến cho bạn những thông tin mới nhất về giống gà đòn, kinh nghiệm chăm sóc gà, cách huấn luyện gà chọi và nhiều hơn thế nữa. Ngoài ra, gachoikhoanguyen.com còn cung cấp con giống gà đòn cho những ai đang quan tâm đến việc nuôi gà chọi.
+                    </p>
+                </div>
             </div>
         </div>
+        
     </div>
 
     <!-- Footer -->
@@ -262,7 +269,7 @@
 
     <!-- Float icons -->
     <div class="fixed right-1 bottom-32 lg:bottom-1/2 flex flex-col gap-3">
-        <a href="https://www.facebook.com/gachoikhoanguyen" target="_blank" class="flex items-center text-white">
+        <a href="https://www.facebook.com/GaDonQuangNgai2" target="_blank" class="flex items-center text-white">
             <img src="./assets/fb-logo.png" alt="" class="w-8 h-8">
         </a>
 
@@ -277,6 +284,9 @@
 
     <script src="./assets/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+
     <script>
     document.addEventListener( 'DOMContentLoaded', function() {
         const splide = new Splide( '.splide', {
@@ -292,6 +302,13 @@
         });
 
         splide.mount(window.splide.Extensions);
+
+        const player = videojs('my-video-stream', {
+            controls: true,
+            fluid: true,
+            preload: 'auto',
+            aspectRatio: '12:5',
+        });
     });
 
     function copyText(el) {
