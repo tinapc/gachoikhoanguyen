@@ -90,22 +90,27 @@
     </div>
 
     <div class="w-full max-w-7xl mx-auto px-4">
-        <div class="border border-red-300 my-8 p-2 text-red-700 text-base lg:text-2xl bg-red-100 rounded-xl">
-            Website hoạt động với hình thức giải trí, không cá độ dưới mọi hình thức vi phạm pháp luật Việt Nam.
+        <div class="text-center my-6 p-2 text-red-700 text-xl font-bold lg:text-2xl rounded-xl uppercase">
+            sổ gà trực tiếp vào lúc 19h hàng ngày
         </div>
 
+        <!-- 
+        https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/manifest/video.m3u8
+        -->
         <div class="flex flex-col lg:flex-row">
-            <video id="my-video-stream" class="w-full lg:w-2/3 video-js" controls poster="./assets/thumbnail.png">
-                Your browser does not support the video tag.
-            </video>
+            <div class="aspect-video w-full lg:w-2/3">
+                <video id="my-video-stream" class="w-full video-js" src="https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/manifest/video.m3u8">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
 
-            <div class="border border-gray-900 w-full h-[460px] lg:h-auto lg:w-1/2 bg-gray-800">
-                <div class="bg-gray-200 text-2xl font-semibold px-4 py-2 flex flex-col">
+            <div class="border border-gray-900 w-full h-[400px] lg:w-1/2 bg-gray-800">
+                <div class="bg-gray-200 text-lg font-semibold px-4 py-2 flex flex-col">
                     <span>Trò Chuyện Trực Tuyến</span>
                     <span class="text-xs text-red-600">Vui lòng không cá cược dưới mọi hình thức.</span>
                 </div>
                 <div class="px-2">
-                    <iframe src="https://www5.cbox.ws/box/?boxid=952291&boxtag=lN0EB5" width="100%" height="100%" class="h-[460px]" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                    <iframe src="https://www5.cbox.ws/box/?boxid=952291&boxtag=lN0EB5" width="100%" height="100%" class="h-[400px]" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
                 </div>
             </div>
         </div>
@@ -286,6 +291,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
 
     <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+    <script src="https://unpkg.com/browse/@videojs/http-streaming@3.10.0/dist/videojs-http-streaming.min.js"></script>
+
 
     <script>
     document.addEventListener( 'DOMContentLoaded', function() {
@@ -306,17 +313,19 @@
         const player = videojs('my-video-stream', {
             controls: true,
             fluid: true,
-            preload: 'auto',
-            aspectRatio: '12:5',
+            fill: true,
+            preload: 'none',
+            aspectRatio: '16:9',
+            poster: './assets/thumbnail.png',
         });
 
-        const buttonPlay = document.querySelector('.vjs-big-play-button');
-        buttonPlay.addEventListener('click', function() {
-            player.src({type: 'application/x-mpegURL', src: 'https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/manifest/video.m3u8'});
-            player.ready(function() {
-                player.play();
-            });
-        });
+        // const buttonPlay = document.querySelector('.vjs-big-play-button');
+        // buttonPlay.addEventListener('click', function() {
+        //     player.src({type: 'application/x-mpegURL', src: ''});
+        //     player.ready(function() {
+        //         player.play();
+        //     });
+        // });
     });
 
     function copyText(el) {
