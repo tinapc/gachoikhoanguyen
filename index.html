@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/js/splide-min.css">
+    <link rel="stylesheet" href="./assets/js/splide.min.css">
     <link rel="stylesheet" href="./assets/js/splide-default.min.css">
     <link rel="stylesheet" href="./assets/js/splide-core.min.css">
     <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
@@ -98,10 +98,28 @@
         https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/manifest/video.m3u8
         -->
         <div class="flex flex-col lg:flex-row">
-            <div class="aspect-video w-full lg:w-2/3">
-                <video id="my-video-stream" class="w-full video-js" src="https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/manifest/video.m3u8">
+            <div class="w-full lg:w-2/3">
+                <div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
+                    <img src="./assets/thumbnail.png" style="cursor:pointer" />
+                </div>
+                <div style="position: relative; padding-top: 56.25%; display: none;">
+                    <iframe
+                      src="https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/iframe"
+                      style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+                      allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                      allowfullscreen="true"
+                    ></iframe>
+                  </div>
+
+                <!-- <video
+                    id="my-video-stream"
+                    class="w-full video-js"
+                    type="application/x-mpegURL"
+                    src="https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/manifest/video.m3u8"
+                >
                     Your browser does not support the video tag.
-                </video>
+                </video> -->
+                
             </div>
 
             <div class="border border-gray-900 w-full h-[400px] lg:w-1/2 bg-gray-800">
@@ -291,8 +309,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
 
     <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
-    <script src="https://unpkg.com/browse/@videojs/http-streaming@3.10.0/dist/videojs-http-streaming.min.js"></script>
-
 
     <script>
     document.addEventListener( 'DOMContentLoaded', function() {
@@ -310,14 +326,14 @@
 
         splide.mount(window.splide.Extensions);
 
-        const player = videojs('my-video-stream', {
-            controls: true,
-            fluid: true,
-            fill: true,
-            preload: 'none',
-            aspectRatio: '16:9',
-            poster: './assets/thumbnail.png',
-        });
+        // const player = videojs('my-video-stream', {
+        //     controls: true,
+        //     fluid: true,
+        //     fill: true,
+        //     preload: 'none',
+        //     aspectRatio: '16:9',
+        //     poster: './assets/thumbnail.png',
+        // });
 
         // const buttonPlay = document.querySelector('.vjs-big-play-button');
         // buttonPlay.addEventListener('click', function() {
