@@ -101,7 +101,7 @@
         -->
         <div class="flex flex-col lg:flex-row">
             <div class="w-full lg:w-2/3">
-                <div id="target"></div>
+                <div id="target" data-playsInline="true"></div>
                 
                 <!-- <div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
                     <img src="./assets/thumbnail.png" style="cursor:pointer" />
@@ -307,7 +307,7 @@
     <script type="module">
         import { VidstackPlayer, VidstackPlayerLayout } from 'https://cdn.vidstack.io/player';
       
-        const player = await VidstackPlayer.create({
+        const player = VidstackPlayer.create({
           target: '#target',
           title: 'Sổ Gà Trực Tiếp',
           src: 'https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/manifest/video.m3u8',
