@@ -303,21 +303,18 @@
 
     <script src="./assets/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
 
     <script type="module">
         import { VidstackPlayer, VidstackPlayerLayout } from 'https://cdn.vidstack.io/player';
       
-        document.addEventListener('DOMContentLoaded', async () => {
-            const player = await VidstackPlayer.create({
-                target: '#target',
-                title: 'Sổ Gà Trực Tiếp',
-                src: 'https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/manifest/video.m3u8',
-                poster: './assets/thumbnail.webp',
-                layout: new VidstackPlayerLayout({
-                    thumbnails: './assets/thumbnail.webp',
-                }),
-            });
+        const player = await VidstackPlayer.create({
+            target: '#target',
+            title: 'Sổ Gà Trực Tiếp',
+            src: 'https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/manifest/video.m3u8',
+            poster: './assets/thumbnail.webp',
+            layout: new VidstackPlayerLayout({
+                thumbnails: './assets/thumbnail.webp',
+            }),
         });
       </script>
 
