@@ -95,10 +95,6 @@
         <div class="text-center my-6 p-2 text-red-700 text-xl font-bold lg:text-2xl rounded-xl uppercase">
             sổ gà trực tiếp vào lúc 19:00 ngày <span id="dynamic-date"></span>
         </div>
-
-        <!-- 
-        https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/manifest/video.m3u8
-        -->
         <div class="flex flex-col lg:flex-row">
             <div class="w-full lg:w-2/3">
                 <div id="target" data-playsInline="true"></div>
@@ -304,20 +300,6 @@
     <script src="./assets/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     <script src="/dist/main.js"></script>
-    <!-- <script type="module">
-        import { VidstackPlayer, VidstackPlayerLayout } from 'https://cdn.vidstack.io/player';
-      
-        const player = await VidstackPlayer.create({
-            target: '#target',
-            title: 'Sổ Gà Trực Tiếp',
-            src: 'https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/manifest/video.m3u8',
-            poster: './assets/thumbnail.webp',
-            layout: new VidstackPlayerLayout({
-                thumbnails: './assets/thumbnail.webp',
-            }),
-        });
-      </script> -->
-
     <script>
     document.addEventListener( 'DOMContentLoaded', function() {
         const dynamicDateContainer = document.getElementById('dynamic-date');
