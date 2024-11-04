@@ -86,7 +86,6 @@
                     <i class="zmdi zmdi-phone"></i>
                     <span class="font-medium">0782224448</span>
                 </div>
-                <!-- <div class="text-2xl lg:hidden"><i class="zmdi zmdi-menu"></i></div> -->
             </div>
         </div>
     </div>
@@ -98,23 +97,16 @@
         <div class="flex flex-col lg:flex-row">
             <div class="w-full lg:w-2/3">
                 <div id="target" data-playsInline="true"></div>
-                
-                <!-- <div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
-                    <img src="./assets/thumbnail.png" style="cursor:pointer" />
-                </div>
-                
-                <div style="position: relative; padding-top: 56.25%; display: none;">
-                    <iframe
-                      src="https://customer-6lidy1ydi3t5txqf.cloudflarestream.com/aa70a8af0f5484ffe42734d7f821c093/iframe?poster=https%3A%2F%2Fgachoikhoanguyen.com%2F%2Fassets%2Fthumbnail.png%3Ftime%3D1s%26height%3D720"
-                      style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
-                      allow="accelerometer; gyroscope; autoplay; muted; playsinline; encrypted-media; picture-in-picture;"
-                      allowfullscreen="true"
-                    ></iframe>
-                </div>        -->
             </div>
 
             <div class="border border-gray-900 w-full h-[400px] lg:w-1/2 bg-gray-800">
-                <a href="javascript:void()" onclick="location.reload()" class="bg-yellow-500 text-black px-4 py-1 flex justify-center">Bấm vào đây nếu không xem được</a>
+                <a href="javascript:void()" onclick="location.reload()" class="bg-yellow-500 text-black px-4 py-1 flex justify-center">
+                    Bấm vào đây nếu không xem được
+                    <span class="flex items-center flex-row gap-1 ml-2">
+                        <span><img src="/assets/viewer.svg" alt=""></span>
+                        <span id="viewer_count">0</span>
+                    </span>
+                </a>
                 <div class="bg-gray-200 text-lg font-semibold px-4 py-2 flex flex-col">
                     <span>Trò Chuyện Trực Tuyến</span>
                     <span class="text-xs text-red-600">Vui lòng không cá cược dưới mọi hình thức.</span>
